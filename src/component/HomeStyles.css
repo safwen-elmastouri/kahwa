@@ -1,0 +1,115 @@
+body{
+    background-color: #e0e1dd;
+}
+h3{
+    justify-content: center;
+    align-items: center;
+    align-self: center;
+}
+.desc {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+#menu-img{
+  width:650 ;
+  height:320 ;
+  border-top-right-radius: 45px ;
+  border-top-left-radius: 45px ;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
+}
+
+    
+
+#menu-desc{
+  background-color: white;
+  margin-top: -25px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+
+  
+}
+ 
+
+
+#drinks ,#food{
+justify-items: center;
+justify-content: center;
+    
+}
+#img-menu{
+  display: flex;
+  align-items:center;
+}
+
+.button {
+justify-content: flex-end;
+align-items: flex-end;
+  background-color: #FFFF;
+  background-image: linear-gradient(#FFFF, #FFFF);
+  border: 1px solid #2A8387;
+  color: #2A8387;
+  border-radius: 45px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+  cursor: pointer;
+  display: block;
+  font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 17px;
+  line-height: 20%;
+  margin: 0;
+  outline: 0;
+  padding: 11px 15px 12px;
+  text-align: center;
+  transition: box-shadow .05s ease-in-out,opacity .05s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  width: 20%;
+  margin-left: 25px;
+  
+}
+
+.button:hover {
+  box-shadow: #2A8387(255, 255, 255, 0.8) 0 0 2px inset, #2A8387(0, 0, 0, 0.7) 0 1px 2px;
+  text-decoration: none;
+  transition-duration: .15s, .15s;
+}
+
+.button:active {
+  box-shadow: rgba(0, 0, 0, 0.15) 0 2px 4px inset, rgba(0, 0, 0, 0.4) 0 1px 1px;
+}
+
+.button:disabled {
+  cursor: not-allowed;
+  opacity: .6;
+}
+
+.button:disabled:active {
+  pointer-events: none;
+}
+
+.button:disabled:hover {
+  box-shadow: none;
+}
+
+
+@media screen and (max-width: 769px) {
+
+    h1 {
+      font-size: 14px;
+    }
+    h3 {
+        font-size: 14px;
+      }
+      #food #drinks{
+        max-width: 70%;
+      }
+  }
