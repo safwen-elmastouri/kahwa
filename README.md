@@ -1,4 +1,6 @@
-# kahwa is a my first "completed" website application build by React js 
+#kahwa Coffee and drinks shop with React js
+
+kahwa is  my first "completed" website application build by React js 
 I used React Router for moving between pages . 
 This website contains :
   Home page : simple Homepage : navbar commponent ,menu and footer
