@@ -19,27 +19,27 @@ export default function Home(props) {
 
     <section className='menu' >
         <div id='drinks'>
+        <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"drink"} >
         <img id='menu-img' src={require('../images/drinks.webp')}  />
         <div id='menu-desc'>
         <h4>Drinks</h4>
         <p>
              Nos pâtisseries et sandwiches sont fabriqués à partir
             </p>
-        <Link to="/product" state={"drink"} >
             <button className='button' >Drinks</button>
-        </Link>
         </div>
+        </Link>
         </div>
         
         <div id='food'    >
-        <img id='menu-img' src={require('../images/food.webp')}  />
-        <div  id='menu-desc' >
-        <h4>Food</h4>
-        <p>Des cafés surprenants issus du monde entier. .</p>
-        <Link to="/product" state={"food"} >
-            <button className='button' >Food</button>
-         </Link>
-        </div>
+            <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"food"} >
+            <img id='menu-img' src={require('../images/food.webp')}  />
+            <div  id='menu-desc' >
+                <h4>Food</h4>
+                <p>Des cafés surprenants issus du monde entier. .</p>
+                <button className='button' >Food</button>
+            </div>
+            </Link>
         </div>
     </section>
     <Footer/>

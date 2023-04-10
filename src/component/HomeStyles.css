@@ -16,6 +16,7 @@ h3{
     display: flex;
     justify-content: space-around;
     flex-direction: row;
+    cursor: pointer;
 }
 #menu-img{
   width:650 ;
