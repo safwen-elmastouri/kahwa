@@ -5,7 +5,9 @@ import { Link } from 'react-router-dom';
 import Button from '@mui/material-next/Button';
 import  "../style/productCard.css"
 
-export default function ProuctCard({source,title,description,val,price} ) {
+export default function ProuctCard(props ) {
+  const {source , title , description , val , price } =props
+
   return (
     <div className='card'>
       <div  className='product' >

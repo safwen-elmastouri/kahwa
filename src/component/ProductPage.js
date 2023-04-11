@@ -13,12 +13,13 @@ export default function ProductPage(){
     const cond = state=="food"
     let data={}
     if (cond) {
+    
         data=food
     }else {data=drink}
-    console.log(data);
     return (
         <>
         <NavBar/>
+         {cond ? <h3 className="menu-titile">Food menu</h3> : <h3 className="menu-titile" >Drinks Menu</h3>} 
         <div className="product-container" >
         {
             data.map(item =>
