@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import NavBar from "./NavBar"
 import { food,drink } from "../data/data";
 import ProuctCard from "./ProuctCard";
-import '../style/product.css'
+import '../style/ProductPage.css'
 import Footer from "./Footer";
 
 
