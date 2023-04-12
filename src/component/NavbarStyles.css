@@ -70,6 +70,10 @@ nav {
 
   #navbar.active {
     right: 0px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 50%;
+    height: 100%;
   }
 
   #navbar li {
@@ -78,6 +82,7 @@ nav {
 
   #mobile {
     display: block;
+    margin-left: 70%;
   }
 
   #mobile i {

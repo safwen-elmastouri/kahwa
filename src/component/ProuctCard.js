@@ -24,7 +24,7 @@ export default function ProuctCard(props ) {
       />
         <p id='price'> {price} </p>
       <div id='product-bottom'>
-      <Button  color="tertiary" variant="elevated" >add to cart</Button>
+      <Button className='add-btn'  color="tertiary" variant="elevated" >add to cart</Button>
       </div>
       </div>
     </div>

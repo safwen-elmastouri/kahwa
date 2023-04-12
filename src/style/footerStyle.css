@@ -31,3 +31,25 @@
     width: 10%;
     height: 20%;
 }
+
+@media screen and (max-width: 769px) {
+
+    .container {
+        display: grid;
+        grid-template-columns:  repeat(2,2fr) ;
+        padding:  20px;
+        margin-top: 45px;
+        align-items: flex-start;
+        justify-content: space-between;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    
+    }
+
+
+#social-media{
+    max-width: 15%;
+    width: 20px;
+}
+
+
+}

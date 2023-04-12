@@ -1,6 +1,7 @@
 .card {
     display: flex;
     align-items: center;
+    justify-content: center;
     background-color: #FFFF;
     padding:  0px 0.25rem 1.5rem;
     -webkit-box-align: center;
@@ -12,11 +13,13 @@
     transition: 0.2s;
     border-radius: 25px;
     margin-top: 3rem;
+    box-shadow: 0.3rem 0.5rem 1.5rem #93999e;
   }
   
   .card:hover{
     transform: translateY(-0.2rem);
-    box-shadow: 0.5rem 0.75rem 1.5rem #adb5bd;
+    box-shadow: 0.7rem 0.9rem 1.8rem #5e6266;
+    
   }
     
     
@@ -37,7 +40,9 @@ border-radius: 54px;
 
 }
 h4{
+
   font-size: 1.2rem;
+  text-align: center;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   line-height: 100%;
 }
@@ -68,21 +73,25 @@ h4{
 
 }
 
+.add-btn{
+  background-color: black;
+  box-shadow: 0.3rem 0.5rem 1.5rem #93999e;
+
+  
+
+}
+
 @media screen and (max-width: 769px) {
 
   .card {
-    display: flex;
-    align-items: center;
-    background-color: #FFFF;
     padding:  0px 0.25rem 1.5rem;
-    -webkit-box-align: center;
-    position: relative;
-    margin: 0.5rem;
-    min-width: 50%;
-    min-height: 50%;
-    transition: 0.2s;
+    margin: .5rem 1rem;
     border-radius: 25px;
     margin-top: 3rem;
+    box-shadow: 0.5rem 0.75rem 1.5rem #adb5bd;
+    
   }
+    
+    
   
 }
