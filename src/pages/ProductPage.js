@@ -1,10 +1,10 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
-import NavBar from "./NavBar"
+import NavBar from "../component/NavBar"
 import { food,drink } from "../data/data";
-import ProuctCard from "./ProuctCard";
+import ProuctCard from "../component/ProuctCard";
+import Footer from "../component/Footer";
 import '../style/productPage.css'
-import Footer from "./Footer";
+import { useLocation } from "react-router-dom";
 
 
 export default function ProductPage(){

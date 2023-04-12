@@ -1,9 +1,9 @@
 import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./component/Home"
-import Contact from './component/Contact'
-import ProductPage from "./component/ProductPage";
-import Cart from "./component/Cart";
+import Home from "./pages/Home"
+import Contact from './pages/Contact'
+import ProductPage from "./pages/ProductPage";
+import Cart from "./pages/Cart";
 export default  function App () {
   return (
     <BrowserRouter>

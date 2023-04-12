@@ -1,5 +1,5 @@
 import React from 'react';
-import { Outlet, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 import '../style/footerStyle.css'
 
 import fb from '../images/social-media/fb.png'
@@ -10,8 +10,7 @@ import tw from '../images/social-media/tw.png'
 function Footer() {
     const date = new Date()
     return (
-        <div className='container' >
-            
+            <dic className="container">
             <div className='service' >
             <h4>Our services</h4>
                 <div>
@@ -32,9 +31,7 @@ function Footer() {
                 <a  > <img id='social-media' src={tw} /></a> 
                 </div>
             </div>
-           
-            <Outlet/>
-        </div>
+           </dic>
     );
 }
 

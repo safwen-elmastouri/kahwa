@@ -1,10 +1,30 @@
-import React from 'react'
-import './HomeStyles.css'
-import Navbar from './NavBar'
-import Footer from './Footer'
+import React, {useLayoutEffect,useEffect, useRef, useState} from 'react'
+import '../style/HomeStyles.css'
+import Navbar from '../component/NavBar'
+import Footer from '../component/Footer'
 import { Link } from 'react-router-dom'
 
 export default function Home(props) {
+
+    const ref = useRef(null);
+    const [numbers, setNumbers] = useState([]);
+
+    const [width, setWidth] = useState(0);
+    useLayoutEffect(() => {
+        setWidth(ref.current.clientWidth);
+      }, [numbers]);
+    
+      useEffect(() => {
+        function handleWindowResize() {
+          setWidth(ref.current.clientWidth);
+        }
+    
+        window.addEventListener('resize', handleWindowResize);
+    
+        return () => {
+          window.removeEventListener('resize', handleWindowResize);
+        };
+      }, []);
     return(
     <>
     <Navbar/>
@@ -17,7 +37,7 @@ export default function Home(props) {
             <div  style={{display:'flex',alignItems:'center',gap:'0.75rem'}}>
             <div className='svg-cart'>
             <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" fill="currentColor" viewBox="0 0 256 256"><rect width="256" height="256" fill="none"></rect><path d="M223.9,65.4l-12.2,66.9A24,24,0,0,1,188.1,152H72.1l4.4,24H184a24,24,0,1,1-24,24,23.6,23.6,0,0,1,1.4-8H102.6a23.6,23.6,0,0,1,1.4,8,24,24,0,1,1-42.2-15.6L34.1,32H16a8,8,0,0,1,0-16H34.1A16,16,0,0,1,49.8,29.1L54.7,56H216a7.9,7.9,0,0,1,6.1,2.9A7.7,7.7,0,0,1,223.9,65.4Z"></path></svg>
-                </div>
+            </div>
                 <p>Simple and secure purchase</p>
             </div  >
             <div  style={{display:'flex',alignItems:'center',gap:'0.75rem'}} >
@@ -51,8 +71,8 @@ export default function Home(props) {
     <section className='menu' >
         <div id='drinks'>
         <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"drink"} >
-        <img id='menu-img' src={require('../images/drinks.webp')}  />
-        <div id='menu-desc'>
+        <img style={{width:width}}  id='menu-img' src={require('../images/drinks.webp')}  />
+        <div ref={ref} id='menu-desc'  >
         <h4>Drinks</h4>
         <p>
              Nos pâtisseries et sandwiches sont fabriqués à partir
@@ -64,8 +84,8 @@ export default function Home(props) {
         
         <div id='food'    >
             <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"food"} >
-            <img id='menu-img' src={require('../images/food.webp')}  />
-            <div  id='menu-desc' >
+            <img style={{width:width}}  id='menu-img'  src={require('../images/food.webp')}  />
+            <div  id='menu-desc'>
                 <h4>Food</h4>
                 <p>Des cafés surprenants issus du monde entier. .</p>
                 <button className='button' >Food</button>
