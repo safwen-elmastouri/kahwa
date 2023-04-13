@@ -10,9 +10,9 @@ import { useLocation } from "react-router-dom";
 export default function ProductPage(){
     const location = useLocation();
     const state = location.state;
-    const cond = state=="food"
+    const cond = state==="food"
     let data={}
-    if (cond) {
+    if (state==="food") {
     
         data=food
     }else {data=drink}

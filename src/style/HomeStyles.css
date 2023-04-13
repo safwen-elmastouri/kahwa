@@ -18,11 +18,23 @@ h3{
     justify-content: space-around;
     gap: 5rem;
     align-items: center;
+    animation-name: positive-benefits;
+    animation-duration: 2s;
+    animation-fill-mode:inherit;
 
+}
+@keyframes positive-benefits {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 .positive-benefits{
-
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -30,8 +42,8 @@ h3{
     column-gap: 0.3rem;
     margin-top: 2rem;
     margin-bottom: 4rem;
-
-
+   
+ 
   }
 
 
@@ -96,6 +108,10 @@ h3{
     grid-template-columns: repeat(2,1fr);
     justify-content: space-around;
     cursor: pointer;
+    animation-name: positive-benefits;
+    animation-duration: 3s;
+
+    animation-fill-mode:inherit;
 }
 #menu-img{
   width:90% ;
@@ -187,6 +203,8 @@ max-width: 650px;
         justify-content: space-around;
         cursor: pointer;
         width: 100%;
+    animation-duration: 4s;
+
     }
     #bg-img{
       width:60% ;
@@ -243,6 +261,18 @@ max-width: 650px;
       justify-content: center;
       
     }
+
+    
+.positive-benefits{
+  display: grid;
+  grid-template-columns: 1fr ;
+  row-gap: .25rem;
+  column-gap: 0.3rem;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+
+}
 
 
     }

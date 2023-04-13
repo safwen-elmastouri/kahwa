@@ -1,10 +1,10 @@
-import React, {useLayoutEffect,useEffect, useRef, useState} from 'react'
+import React, {useLayoutEffect,useEffect, useRef, useState,memo} from 'react'
 import '../style/HomeStyles.css'
 import Navbar from '../component/NavBar'
 import Footer from '../component/Footer'
 import { Link } from 'react-router-dom'
 
-export default function Home(props) {
+function Home(props) {
 
     const ref = useRef(null);
     const [numbers, setNumbers] = useState([]);
@@ -98,5 +98,8 @@ export default function Home(props) {
     </>
     )
 }
+
+
+export default memo(Home)
 
 

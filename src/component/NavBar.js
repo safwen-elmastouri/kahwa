@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, {memo,Component  } from "react";
 import "../style/NavbarStyles.css";
 import { Link } from "react-router-dom";
 
@@ -67,4 +67,4 @@ class Navbar extends Component {
   }
 }
 
-export default Navbar;
+export default memo(Navbar);
