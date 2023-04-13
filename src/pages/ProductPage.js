@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 export default function ProductPage(){
     const location = useLocation();
     const state = location.state;
-    const cond = state==="food"
+    const condition = state==="food"
     let data={}
     if (state==="food") {
     
@@ -19,7 +19,7 @@ export default function ProductPage(){
     return (
         <>
         <NavBar/>
-         {cond ? <h3 className="menu-titile">Food menu</h3> : <h3 className="menu-titile" >Drinks Menu</h3>} 
+         {condition ? <h3 className="menu-titile">Food menu</h3> : <h3 className="menu-titile" >Drinks Menu</h3>} 
         <div className="product-container" >
         {
             data.map(item =>
