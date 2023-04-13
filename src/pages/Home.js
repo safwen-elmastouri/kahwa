@@ -100,6 +100,6 @@ function Home(props) {
 }
 
 
-export default memo(Home)
+export default Home
 
 

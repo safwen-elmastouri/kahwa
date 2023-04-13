@@ -35,6 +35,7 @@ h3{
 }
 
 .positive-benefits{
+    transform: scaleX(-2rem);
     width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -109,7 +110,8 @@ h3{
     justify-content: space-around;
     cursor: pointer;
     animation-name: positive-benefits;
-    animation-duration: 3s;
+    animation-duration: 2s;
+    animation-delay: 2s;
 
     animation-fill-mode:inherit;
 }
@@ -203,8 +205,6 @@ max-width: 650px;
         justify-content: space-around;
         cursor: pointer;
         width: 100%;
-    animation-duration: 4s;
-
     }
     #bg-img{
       width:60% ;
@@ -215,7 +215,6 @@ max-width: 650px;
     
     }
     #menu-img{
-      max-width: 90%;
       border-top-right-radius: 45px ;
       border-top-left-radius: 45px ;
       box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
