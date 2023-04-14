@@ -27,13 +27,14 @@
     
     
 
-.img-product{
-width: auto;
-max-width: 50%;
-height: 50%;
+.img-product {
+width: 70%;
+height: 30%;
 align-items: center;
 border-radius: 54px;
 }
+
+
 .product{
   display: flex ;
   flex-direction: column;

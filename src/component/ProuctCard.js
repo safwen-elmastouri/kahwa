@@ -6,10 +6,10 @@ import Button from '@mui/material-next/Button';
 import  "../style/productCard.css"
 
 function ProuctCard(props ) {
-  const {source , title , description , val , price } =props
+  const {source , title , val , price} =props
 
   return (
-    <div className='card' key={source} >
+    <div className='card' >
       <div  className='product' >
       <ShoppingCartIcon  className='productCard__cart' />
 

@@ -33,38 +33,43 @@ export default function ProductPage(){
         />
 
 </div>
-   
 
       
      
         <div className="product-container" >
         {
             
-            data.filter((val) =>{
+             data.filter((item) =>{
                 if (searchTerm==''){
-                    return val
-                }else if (val.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
-                    return val
+                    return item
+                }else if (item.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())){
+                    return item
                     
+                }
+                else if (item.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())==false){
+                    setEmpty(true)
                 }
                
                     
                 
+                if  (item=={})
+                {return( <p>sss</p>)
+              }
                 
-                
-            }).map((val,key)=>{
+                      }).map((item,key)=>{
                 return(
-                
-                                <ProuctCard 
-                                    source={val.source}
-                                    title={val.title}
-                                    description={val.description}
-                                    val={val.val}
-                                    price={val.price}
+                                <ProuctCard id={key}
+                                    source={item.source}
+                                    title={item.title}
+                                    description={item.description}
+                                    val={item.val}
+                                    price={item.price}
                                     />
             )
-        })
+        }
+        )
             }
+     
             </div>
             <Footer/>
             </>
