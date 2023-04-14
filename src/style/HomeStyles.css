@@ -1,4 +1,5 @@
 body{
+  height: 100%;
   
   background-color: #e0e1dd;
 }
@@ -13,6 +14,7 @@ margin-block-end: 1em;
 margin-block-start: 1em;  
 }
 .desc {
+  border-radius: 45px;
   margin:20px 30px;
   display: flex;
   justify-content: space-around;
@@ -41,8 +43,7 @@ to {
   grid-template-columns: 1fr 1fr;
   row-gap: .25rem;
   column-gap: 0.3rem;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
+  margin: 4rem 2rem 4rem;
  
 
 }
@@ -56,9 +57,7 @@ border-radius: 50%;
 background: rgb(196, 127, 23);
 color: rgb(255, 255, 255);
 display: flex;
--webkit-box-align: center;
 align-items: center;
--webkit-box-pack: center;
 justify-content: center;
 
 }
@@ -69,9 +68,7 @@ border-radius: 50%;
 background: rgb(87, 79, 77);
 color: rgb(255, 255, 255);
 display: flex;
--webkit-box-align: center;
 align-items: center;
--webkit-box-pack: center;
 justify-content: center;
 }
 .time-icon{
@@ -81,9 +78,7 @@ border-radius: 50%;
 background: rgb(219, 172, 44);
 color: rgb(255, 255, 255);
 display: flex;
--webkit-box-align: center;
 align-items: center;
--webkit-box-pack: center;
 justify-content: center;
 
 
@@ -96,26 +91,25 @@ min-width: 2rem;
   background: rgb(128, 71, 248);
   color: rgb(255, 255, 255);
   display: flex;
-  -webkit-box-align: center;
   align-items: center;
-  -webkit-box-pack: center;
   justify-content: center;
 
 }
 
 
 .menu{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  cursor: pointer;
+  
+  display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap:wrap;
+    cursor: pointer;
   animation-name: positive-benefits;
   animation-duration: 2s;
-  animation-delay: 2s;
-
   animation-fill-mode:inherit;
 }
 #menu-img{
-width:90% ;
+width:100% ;
 height:auto ;
 border-top-right-radius: 45px ;
 border-top-left-radius: 45px ;
@@ -140,9 +134,9 @@ box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 justify-items: center;
 justify-content: center;
 margin-left: 10px;
-max-width: 650px;
-  
+
 }
+
 #bg-img{
 max-width: 100%; 
 height: 100%;
@@ -198,13 +192,7 @@ background: #2A8387;
       justify-content: space-around;
       flex-direction: column;
     }
-  .menu{
-      display: grid;
-      grid-template-columns: repeat(1,1fr);
-    	place-items: center;
-      cursor: pointer;
-      width: 100%;
-  }
+
   #bg-img{
     width:60% ;
     height: 80%;
@@ -228,15 +216,9 @@ background: #2A8387;
   
       
   
-  #menu-desc{
-    background-color: white;
-    width: 80%;
-    margin-top: -25px;
-    border-radius: 25px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-  
+
     
-  }
+  
    
   
   

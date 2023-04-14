@@ -25,7 +25,7 @@ function Footer() {
             </div>
             <div className='sm-container' >
                 <h4>Social media</h4>
-               <div>
+               <div >
                 <a  > <img id='social-media' src={fb} /></a> 
                 <a  > <img id='social-media' src={yt} /></a> 
                 <a  > <img id='social-media' src={tw} /></a> 

@@ -1,8 +1,6 @@
 .product-container{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
-    margin-left: auto;
-    margin-right: auto;
+    grid-template-columns: repeat(4,1fr);
     margin: 1rem 2rem;
     justify-content: space-around;
     box-sizing: border-box;
@@ -11,6 +9,34 @@
     animation-fill-mode:inherit;
 
 }
+
+.box{
+  margin:3rem 2rem -1rem;
+}
+
+.input {
+  padding: 10px;
+  width: 30%;
+  height: 3rem;
+  background: none;
+  border: 2px solid #ffd52d;
+  border-radius: 50px;
+  box-sizing: border-box;
+  font-family: Comic Sans MS;
+  font-size: 16px;
+  outline: none;
+  transition: .5s;
+}
+.box:hover input{
+  background: #edf6f9;
+  border-radius: 10px;
+}
+
+.box:hover i{
+  opacity: 0;
+  z-index: 1;
+}
+
 @keyframes product-animation {
   from {
     opacity: 0;
@@ -42,4 +68,8 @@
         gap: 1rem;
     }    
 
+    .input{
+      width:70%;
+      margin-bottom: 20px;
+    }
 }

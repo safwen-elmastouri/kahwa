@@ -6,25 +6,8 @@ import { Link } from 'react-router-dom'
 
 function Home(props) {
 
-    const ref = useRef(null);
-    const [numbers, setNumbers] = useState([]);
 
-    const [width, setWidth] = useState(0);
-    useLayoutEffect(() => {
-        setWidth(ref.current.clientWidth);
-      }, [numbers]);
-    
-      useEffect(() => {
-        function handleWindowResize() {
-          setWidth(ref.current.clientWidth);
-        }
-    
-        window.addEventListener('resize', handleWindowResize);
-    
-        return () => {
-          window.removeEventListener('resize', handleWindowResize);
-        };
-      }, []);
+      
     return(
     <>
     <Navbar/>
@@ -71,8 +54,8 @@ function Home(props) {
     <section className='menu' >
         <div id='drinks'>
         <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"drink"} >
-        <img style={{width:width}}  id='menu-img' src={require('../images/drinks.webp')}  />
-        <div ref={ref} id='menu-desc'  >
+        <img   id='menu-img' src={require('../images/drinks.webp')}  />
+        <div  id='menu-desc'  >
         <h4>Drinks</h4>
         <p>
              Nos pâtisseries et sandwiches sont fabriqués à partir
@@ -84,7 +67,7 @@ function Home(props) {
         
         <div id='food'    >
             <Link style={{color: 'inherit', textDecoration: 'inherit'}} to="/product" state={"food"} >
-            <img style={{width:width}}  id='menu-img'  src={require('../images/food.webp')}  />
+            <img  id='menu-img'  src={require('../images/food.webp')}  />
             <div  id='menu-desc'>
                 <h4>Food</h4>
                 <p>Des cafés surprenants issus du monde entier. .</p>

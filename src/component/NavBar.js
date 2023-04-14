@@ -8,8 +8,10 @@ class Navbar extends Component {
     this.setState({ clicked: !this.state.clicked });
   };
   render() {
+
+    window.scrollTo(0,0)
     return (
-      <>
+     <>
         <nav>
 
           <a >
@@ -17,7 +19,9 @@ class Navbar extends Component {
            <img id="logo-15" src={require('../images/logo.png')} style={{width:70,height:60}} />
           </Link>
           </a>
-
+          <Link to="/">
+           <h3 id="title">Kahwa</h3>
+          </Link>
           <div style={{ display:'flex', flexDirection:'row'}}>
             <ul
               id="navbar"

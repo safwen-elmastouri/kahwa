@@ -49,7 +49,9 @@ nav {
   color: #fff;
   align-items: center;
 }
-
+#title{
+  display: none;
+}
 
 @media screen and (max-width: 769px) {
   nav{
@@ -86,12 +88,18 @@ nav {
   }
 
   #mobile {
-    display: block;
-    margin-left: 70%;
+    display: flex;
+    margin-left: 40%;
   }
 
   #mobile i {
     font-size: 24px;
     cursor: pointer;
+  }
+  #title{
+    display: block;
+    margin-left: 50%;
+    color: #f1faee;
+    align-items: center;
   }
 }

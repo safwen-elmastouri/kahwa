@@ -15,14 +15,16 @@ function ProuctCard(props ) {
 
         <img className='img-product' src={source}/>
         <h4> {title} </h4>
-        <p id='desc' > {description} </p>
       <ReactStars
         size={24}
         value={val}
         activeColor="#ffd700"
         edit={false}
       />
-        <p id='price'> {price} </p>
+        <div style={{display:'flex',flexDirection:'row'}} >
+        <p id='price'> {price}  </p>
+        <p id='price' style={{fontSize:"15px"}} >dt</p>
+        </div>
       <div id='product-bottom'>
       <Button className='add-btn'  color="tertiary" variant="elevated" >add to cart</Button>
       </div>

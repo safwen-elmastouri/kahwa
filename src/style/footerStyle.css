@@ -5,7 +5,7 @@
     padding:  20px;
     margin-top: 45px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-
+    margin-top: 30%;
 }
 .container h4 {
     color: #2A8387;
@@ -26,7 +26,7 @@
 
 #social-media {
     cursor: pointer;
-    width: 10%;
+    width:5%;
     height: 10%;
 }
 
@@ -45,9 +45,8 @@
 
 
 #social-media{
-    max-width: 15%;
-    width: 20px;
-}
+    width: 20%;
+        }
 
 
 }
