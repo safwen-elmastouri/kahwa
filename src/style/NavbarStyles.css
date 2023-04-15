@@ -8,7 +8,6 @@ nav {
 }
 #navbar {
   display: flex;
-  align-items: flex-start;
 
 }
 
@@ -28,6 +27,7 @@ nav {
 #navbar li a:hover,
 #navbar li a.active {
   color: #17cf97;
+
 }
 
 #navbar li a:hover::after,
@@ -52,11 +52,32 @@ nav {
 #title{
   display: none;
 }
+.cart-container {
+  display:flex ;
+  flex-direction:row;
+  align-items: center;
+justify-content: flex-end;
+margin-left: auto;
+}
+.cart-container:hover{
+  opacity: 0.6;
+}
+
+#cart{
+  color: #FFF;
+
+}
+#cart-text{
+  color: #FFFF;
+
+}
+
 
 @media screen and (max-width: 769px) {
   nav{
     margin-left: -10px;
     margin-right: -10px;
+    display: flex;
   }
   #navbar {
     z-index: 1;
@@ -88,12 +109,13 @@ nav {
   }
 
   #mobile {
+    margin-left: 10px;
     display: flex;
-    margin-left: 40%;
+
   }
 
   #mobile i {
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
   }
   #title{
@@ -101,5 +123,10 @@ nav {
     margin-left: 50%;
     color: #f1faee;
     align-items: center;
+  }
+
+
+  #cart{
+    color: #FFF;
   }
 }

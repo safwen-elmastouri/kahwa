@@ -1,4 +1,4 @@
-import React , { memo} from 'react'
+import React , { memo, useState} from 'react'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 import ReactStars from "react-rating-stars-component";
 import { Link } from 'react-router-dom';
@@ -6,6 +6,8 @@ import Button from '@mui/material-next/Button';
 import  "../style/productCard.css"
 
 function ProuctCard(props ) {
+  const [addProduct,setAddProduct]=useState([])
+  
   const {source , title , val , price} =props
 
   return (
@@ -26,7 +28,9 @@ function ProuctCard(props ) {
         <p id='price' style={{fontSize:"15px"}} >dt</p>
         </div>
       <div id='product-bottom'>
-      <Button className='add-btn'  color="tertiary" variant="elevated" >add to cart</Button>
+      <Link to="/my-cart" state={title} style={{color: 'inherit', textDecoration: 'inherit' }}  >
+      <Button className='add-btn'  color="tertiary" variant="elevated"  >add to cart</Button>
+      </Link>
       </div>
       </div>
     </div>

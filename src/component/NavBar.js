@@ -1,7 +1,7 @@
 import React, {memo,Component  } from "react";
 import "../style/NavbarStyles.css";
 import { Link } from "react-router-dom";
-
+import { ShoppingCart } from "@mui/icons-material";
 class Navbar extends Component {
   state = { clicked: false };
   handleClick = () => {
@@ -15,13 +15,14 @@ class Navbar extends Component {
         <nav>
 
           <a >
-            <Link to='/'>
+            <Link to='/' style={{color: 'inherit', textDecoration: 'inherit'}}>
            <img id="logo-15" src={require('../images/logo.png')} style={{width:70,height:60}} />
           </Link>
           </a>
-          <Link to="/">
+          <Link to="/" style={{color: 'inherit', textDecoration: 'inherit'}}>
            <h3 id="title">Kahwa</h3>
           </Link>
+
           <div style={{ display:'flex', flexDirection:'row'}}>
             <ul
               id="navbar"
@@ -58,12 +59,19 @@ class Navbar extends Component {
             </div>
 
           </div>
+          <div className="cart-container" >
+          <Link to='/my-cart' style={{color: 'inherit', textDecoration: 'inherit'}}>
+            
+            <ShoppingCart id="cart"  />
+            </Link>
+          </div>
 
           <div id="mobile" onClick={this.handleClick}>
             <i
               id="bar"
               className={this.state.clicked ? "fas fa-times" : "fas fa-bars"}
             ></i>
+
           </div>
         </nav>
       </>

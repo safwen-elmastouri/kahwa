@@ -52,10 +52,7 @@ export default function ProductPage(){
                
                     
                 
-                if  (item=={})
-                {return( <p>sss</p>)
-              }
-                
+             
                       }).map((item,key)=>{
                 return(
                                 <ProuctCard id={key}
@@ -64,6 +61,7 @@ export default function ProductPage(){
                                     description={item.description}
                                     val={item.val}
                                     price={item.price}
+                                    state={state}
                                     />
             )
         }
