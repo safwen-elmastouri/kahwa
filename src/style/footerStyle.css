@@ -1,51 +1,51 @@
 .container {
-    background-color: #edede9;
-    display: grid;
-    grid-template-columns: repeat(3,1fr) ;
-    padding:  20px;
-    margin-top: 45px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: #303c4b;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 20px;
+  margin-top: 5%;
+  box-shadow: 0px 0px 35px #54595e;
+  margin-bottom: -20px;
+  margin-left: -5px;
+  margin-right: -5px;
 }
 .container h4 {
-    color: #2A8387;
-    font-size: 16px;
-
+  color: #2a8387;
+  font-size: 16px;
 }
-.sm-container{
-    flex-direction: row;
-    
+.sm-container {
+  flex-direction: row;
+  align-items: center;
+  align-self: center;
 }
 .service a {
-    transition: all 0.3s ease-inw;
+  color: #ffff;
+  transition: all 0.3s ease-inw;
 }
 .service a:hover {
-    color: #17cf97;
-    box-shadow: black;
+  color: #17cf97;
+  box-shadow: black;
 }
 
 #social-media {
-    cursor: pointer;
-    width:5%;
-    height: 10%;
+  cursor: pointer;
+  width: 8%;
+  height: 10%;
+  margin: 0px 0.5%;
 }
 
 @media screen and (max-width: 769px) {
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px;
+    margin-top: 45px;
+    align-items: flex-start;
+    justify-content: space-between;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
 
-    .container {
-        display: grid;
-        grid-template-columns:  repeat(3,1fr) ;
-        padding:  20px;
-        margin-top: 45px;
-        align-items: flex-start;
-        justify-content: space-between;
-        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-    
-    }
-
-
-#social-media{
+  #social-media {
     width: 20%;
-        }
-
-
+  }
 }

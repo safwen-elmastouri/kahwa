@@ -59,7 +59,7 @@ class Navbar extends Component {
             </div>
 
           </div>
-          <div className="cart-container" >
+          <div className="cart" >
           <Link to='/my-cart' style={{color: 'inherit', textDecoration: 'inherit'}}>
             
             <ShoppingCart id="cart"  />

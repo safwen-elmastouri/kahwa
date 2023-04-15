@@ -1,17 +1,16 @@
-.product-container{
-    display: grid;
-    grid-template-columns: repeat(4,1fr);
-    margin: 1rem 2rem;
-    justify-content: space-around;
-    box-sizing: border-box;
-    animation-name: product-animation;
-    animation-duration: 2s;
-    animation-fill-mode:inherit;
-
+.product-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 1rem 2rem;
+  justify-content: space-around;
+  box-sizing: border-box;
+  animation-name: product-animation;
+  animation-duration: 2s;
+  animation-fill-mode: inherit;
 }
 
-.box{
-  margin:3rem 2rem -1rem;
+.box {
+  margin: 3rem 2rem -1rem;
 }
 
 .input {
@@ -25,13 +24,13 @@
   font-family: Comic Sans MS;
   font-size: 16px;
   outline: none;
-  transition: .5s;
+  transition: 0.5s;
 }
-.box:hover input{
+.box:hover input {
   border-radius: 10px;
 }
 
-.box:hover i{
+.box:hover i {
   opacity: 0;
   z-index: 1;
 }
@@ -47,28 +46,24 @@
   }
 }
 
-
-.menu-titile{
-    font-size: 2rem;
-    margin-bottom: -10px;
-    padding: 0px 40px;
-    color: #22223b;
-    font-size: 40px;
-
+.menu-titile {
+  font-size: 2rem;
+  margin-bottom: -10px;
+  padding: 0px 40px;
+  color: #22223b;
+  font-size: 40px;
 }
 
-
 @media screen and (max-width: 769px) {
+  .product-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: auto auto;
+    gap: 1rem;
+  }
 
-    .product-container{
-       display: grid;
-       grid-template-columns: repeat(2,1fr);
-       margin: auto auto;
-        gap: 1rem;
-    }    
-
-    .input{
-      width:70%;
-      margin-bottom: 20px;
-    }
+  .input {
+    width: 70%;
+    margin-bottom: 20px;
+  }
 }

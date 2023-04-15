@@ -1,91 +1,83 @@
-body{
+body {
   height: 100%;
-  
+
   background-color: #e0e1dd;
 }
-h3{
-color: rgb(39, 34, 33);
-font-size: 3rem;
-font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-line-height: 130%;
-font-weight: 800;
-box-sizing: border-box;
-margin-block-end: 1em;
-margin-block-start: 1em;  
+h3 {
+  color: rgb(39, 34, 33);
+  font-size: 3rem;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  line-height: 130%;
+  font-weight: 800;
+  box-sizing: border-box;
+  margin-block-end: 1em;
+  margin-block-start: 1em;
 }
 .desc {
   border-radius: 45px;
-  margin:20px 30px;
+  margin: 20px 30px;
   display: flex;
   justify-content: space-around;
   gap: 5rem;
   align-items: center;
   animation-name: positive-benefits;
   animation-duration: 2s;
-  animation-fill-mode:inherit;
-
+  animation-fill-mode: inherit;
 }
 @keyframes positive-benefits {
-from {
-  opacity: 0;
-  transform: translate3d(0, -20%, 0);
-}
-to {
-  opacity: 1;
-  transform: none;
-}
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
 }
 
-.positive-benefits{
+.positive-benefits {
   transform: scaleX(-2rem);
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: .25rem;
+  row-gap: 0.25rem;
   column-gap: 0.3rem;
   margin: 4rem 2rem 4rem;
- 
-
 }
 
-
-.svg-cart{
-
-min-width: 2rem;
-height: 2rem;
-border-radius: 50%;
-background: rgb(196, 127, 23);
-color: rgb(255, 255, 255);
-display: flex;
-align-items: center;
-justify-content: center;
-
+.svg-cart {
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgb(196, 127, 23);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.pack{
-min-width: 2rem;
-height: 2rem;
-border-radius: 50%;
-background: rgb(87, 79, 77);
-color: rgb(255, 255, 255);
-display: flex;
-align-items: center;
-justify-content: center;
+.pack {
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgb(87, 79, 77);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.time-icon{
-min-width: 2rem;
-height: 2rem;
-border-radius: 50%;
-background: rgb(219, 172, 44);
-color: rgb(255, 255, 255);
-display: flex;
-align-items: center;
-justify-content: center;
-
-
-
+.time-icon {
+  min-width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgb(219, 172, 44);
+  color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-.fresh-coffee{
-min-width: 2rem;
+.fresh-coffee {
+  min-width: 2rem;
   height: 2rem;
   border-radius: 50%;
   background: rgb(128, 71, 248);
@@ -93,144 +85,123 @@ min-width: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-
-.menu{
-  
+.menu {
   display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap:wrap;
-    cursor: pointer;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  cursor: pointer;
   animation-name: positive-benefits;
   animation-duration: 2s;
-  animation-fill-mode:inherit;
+  animation-fill-mode: inherit;
 }
-#drinks:hover,#food:hover{
+#drinks:hover,
+#food:hover {
   opacity: 0.9;
 }
-#menu-img{
-width:100% ;
-height:auto ;
-border-top-right-radius: 45px ;
-border-top-left-radius: 45px ;
-box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
+#menu-img {
+  width: 100%;
+  height: auto;
+  border-top-right-radius: 45px;
+  border-top-left-radius: 45px;
+  box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
 }
 
-  
-
-#menu-desc{
-background-color: white;
-margin-top: -25px;
-padding: 20px;
-border-radius: 25px;
-box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
-
-
+#menu-desc {
+  background-color: white;
+  margin-top: -25px;
+  padding: 20px;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
 }
 
-
-
-#drinks ,#food{
-justify-items: center;
-justify-content: center;
-margin-left: 10px;
-
+#drinks,
+#food {
+  justify-items: center;
+  justify-content: center;
+  margin-left: 10px;
 }
 
-#bg-img{
-max-width: 100%; 
-height: 100%;
-box-sizing: border-box;
-
+#bg-img {
+  max-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
 }
-#desc-details{
-color: rgb(64, 57, 55);
-font-size: 1.25rem;
-line-height: 130%;
-font-weight: 400;
-
-
+#desc-details {
+  color: rgb(64, 57, 55);
+  font-size: 1.25rem;
+  line-height: 130%;
+  font-weight: 400;
 }
 
 .button {
-background-color: #FFFF;
-border: 1px solid #2A8387;
-color: #2A8387;
-border-radius: 45px;
-box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
-cursor: pointer;
-font-family: -apple-system,".SFNSDisplay-Regular","Helvetica Neue",Helvetica,Arial,sans-serif;
-font-size: 17px;
-line-height: 20%;
-padding: 11px 15px 12px;
-text-align: center;
-touch-action: manipulation;
-transition: background-color 2s ease-out 70ms;
-transition: color 0s ease-out 30ms;
-width: 20%;
-margin-left: 25px;
-
+  background-color: #ffff;
+  border: 1px solid #2a8387;
+  color: #2a8387;
+  border-radius: 45px;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 1px 1px;
+  cursor: pointer;
+  font-family: -apple-system, ".SFNSDisplay-Regular", "Helvetica Neue",
+    Helvetica, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 20%;
+  padding: 11px 15px 12px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 2s ease-out 70ms;
+  transition: color 0s ease-out 30ms;
+  width: 20%;
+  margin-left: 25px;
 }
 
 .button:hover {
-color: #FFFF;
-background: #2A8387;
+  color: #ffff;
+  background: #2a8387;
 }
 
-
-
 @media screen and (max-width: 769px) {
-
   h1 {
     font-size: 24px;
   }
   h3 {
-      font-size: 24px;
-    }
-    .desc {
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-    }
+    font-size: 24px;
+  }
+  .desc {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
 
-  #bg-img{
-    width:60% ;
+  #bg-img {
+    width: 60%;
     height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-  
   }
-  #menu-img{
-    border-top-right-radius: 45px ;
-    border-top-left-radius: 45px ;
+  #menu-img {
+    border-top-right-radius: 45px;
+    border-top-left-radius: 45px;
     box-shadow: 0 10px 60px rgba(0, 0, 0, 0.4);
   }
-  #desc-details{
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  #desc-details {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+      sans-serif;
     color: rgb(64, 57, 55);
     font-size: 1rem;
     line-height: 130%;
     font-weight: 400;
   }
-  
-      
-  
 
-    
-  
-   
-  
-  
-  #drinks ,#food{
-  justify-items: center;
-  justify-content: center;
-  margin-bottom: 50px;
-  margin-top: 30px;
-      
+  #drinks,
+  #food {
+    justify-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+    margin-top: 30px;
   }
   .button {
     font-size: 17px;
@@ -242,20 +213,14 @@ background: #2A8387;
     display: flex;
     align-items: center;
     justify-content: center;
-    
   }
 
-  
-.positive-benefits{
-display: grid;
-grid-template-columns: 1fr ;
-row-gap: .25rem;
-column-gap: 0.3rem;
-margin-top: 2rem;
-margin-bottom: 4rem;
-
-
+  .positive-benefits {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 0.25rem;
+    column-gap: 0.3rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+  }
 }
-
-
-  }
