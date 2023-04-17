@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, memo, useEffect } from "react";
 import NavBar from "../component/NavBar";
 import { food, drink } from "../data/data";
 import ProuctCard from "../component/ProuctCard";
@@ -6,7 +6,7 @@ import Footer from "../component/Footer";
 import "../style/productPage.css";
 import { useLocation } from "react-router-dom";
 
-export default function ProductPage() {
+function ProductPage() {
   const [empty, setEmpty] = useState(false);
   const location = useLocation();
   const state = location.state;
@@ -18,6 +18,7 @@ export default function ProductPage() {
   } else {
     data = drink;
   }
+
   return (
     <>
       <NavBar />
@@ -26,19 +27,18 @@ export default function ProductPage() {
       ) : (
         <h3 className="menu-titile">Drinks Menu</h3>
       )}
-
       <div className="box">
         <input
           type="text"
           className="input"
           name="txt"
+          value={searchTerm}
           placeholder="Search ..."
           onChange={(event) => {
             setSearchTerm(event.target.value);
           }}
         />
       </div>
-
       <div className="product-container">
         {data
           .filter((item) => {
@@ -48,18 +48,15 @@ export default function ProductPage() {
               item.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
             ) {
               return item;
-            } else if (
-              item.title
-                .toLowerCase()
-                .includes(searchTerm.toLocaleLowerCase()) == false
-            ) {
-              setEmpty(true);
+            } else if (!item.length) {
+              setEmpty(!empty);
             }
           })
           .map((item, key) => {
             return (
               <ProuctCard
-                id={key}
+                id={ key }
+                key={key}
                 source={item.source}
                 title={item.title}
                 description={item.description}
@@ -69,7 +66,11 @@ export default function ProductPage() {
             );
           })}
       </div>
+      {empty && <p>dd</p>}
+      {console.log(empty)}
       <Footer />
     </>
   );
 }
+
+export default memo(ProductPage);

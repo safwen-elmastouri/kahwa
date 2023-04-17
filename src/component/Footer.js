@@ -8,7 +8,7 @@ import tw from "../images/social-media/tw.png";
 
 function Footer() {
   return (
-    <dic className="container">
+    <div className="container">
       <div className="service">
         <h4>Our services</h4>
         <div>
@@ -50,7 +50,7 @@ function Footer() {
           </a>
         </div>
       </div>
-    </dic>
+    </div>
   );
 }
 

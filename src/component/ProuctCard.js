@@ -8,9 +8,9 @@ import "../style/productCard.css";
 function ProuctCard(props) {
   const [addProduct, setAddProduct] = useState([]);
 
-  const { source, title, description, val, price } = props;
+  const {id, source, title, description, val, price } = props;
   return (
-    <div className="card">
+    <div className="card" id={id} >
       <Link
         to="/details"
         state={props}
