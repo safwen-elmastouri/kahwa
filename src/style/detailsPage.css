@@ -1,9 +1,12 @@
 .details-container {
+
   background: #FFF;
   display: flex;
   flex-direction: row;
   margin: 70px 10%;
   border-radius: 45px;
+  box-shadow: 10px 10px 10px gray;
+
 }
 
 .details {
