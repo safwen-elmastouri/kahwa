@@ -1,4 +1,4 @@
-import React, { useState, memo, useMemo  } from "react";
+import React, { useState, memo, useMemo } from "react";
 import NavBar from "../component/NavBar";
 import { food, drink } from "../data/data";
 import ProuctCard from "../component/ProuctCard";
@@ -7,17 +7,8 @@ import "../style/productPage.css";
 import { useLocation } from "react-router-dom";
 
 function ProductPage() {
+    window.scrollTo(0, 0);
   const [empty, setEmpty] = useState(false);
-  const isObjectEmpty = (objectName) => {
-    return (
-      objectName &&
-      Object.keys(objectName).length === 0 &&
-      objectName.constructor === Object
-    );
-  };
-
-    
-
   const location = useLocation();
   const state = location.state;
   const condition = state === "food";
@@ -61,26 +52,26 @@ function ProductPage() {
                   .includes(searchTerm.toLocaleLowerCase())
               ) {
                 return item;
-              } else if (item == undefined || item == null) {
+              } else if (
+                item.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLocaleLowerCase())
+              ) {
                 console.log(item);
-                let d = document.getElementsByTagName("p");
-                d[0].innerHTML = "dd";
-              }
-              {
-                console.log(item, item.key);
               }
             })
             .map((item, key) => {
-              return (
-                <ProuctCard
-                  id={key}
-                  key={key}
-                  source={item.source}
-                  title={item.title}
-                  description={item.description}
-                  val={item.val}
-                  price={item.price}
-                />
+
+                return ( 
+                  <ProuctCard
+                    id={key}
+                    key={key}
+                    source={item.source}
+                    title={item.title}
+                    description={item.description}
+                    val={item.val}
+                    price={item.price}
+                  />
               );
             })}
         </div>

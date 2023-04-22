@@ -1,5 +1,6 @@
 .container {
-  background: #303c4b;
+  background: #2c3034 ;
+  bottom:  calc(20px);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   padding: 20px;
@@ -30,7 +31,8 @@
 #social-media {
   cursor: pointer;
   width: 8%;
-  height: 10%;
+  height: 9%;
+  border-radius: 35px;
   margin: 0px 0.5%;
 }
 
