@@ -6,13 +6,11 @@
 .container-product {
   display: flex;
   flex-direction: row;
-  width: max-content;
-  margin-left: 5%;
-  margin-right: auto;
+  margin-left: 10px;
+  justify-content: space-evenly;
 }
 .details-container {
   padding: 10px 10px;
-  width: 60%;
   background: #fff;
   display: flex;
   flex-direction: row;
@@ -22,20 +20,15 @@
 }
 .delivery-container {
   height: 30%;
-  align-items: center;
   display: flex;
-  margin-left: 100px;
-  padding:  100px;
 
   background: #fff;
   border-radius: 25px;
-  padding: 10px;
-  width: 60%;
+  width: max-content;
+  padding: 0px 50px;
   display: flex;
-  justify-content: center;
   align-items: center;
   align-content: center;
-  padding-left: 25px;
 }
 
 label {
@@ -136,7 +129,7 @@ select::-ms-expand {
   height: auto;
 }
 form {
-  width: 300px;
+  width: 90%;
   height: auto;
   margin: 0px 30px;
   padding-top: 25px;
@@ -287,12 +280,15 @@ input[type="number"]::-webkit-outer-spin-button {
 .fields {
   display: grid;
   grid-gap: 1rem;
+  margin: 25px;
 }
 .fields--2 {
   grid-template-columns: 1fr 1fr;
+  margin: 25px;
 }
 .fields--3 {
   grid-template-columns: 1fr 1fr 1fr;
+  margin: 25px;
 }
 ::placeholder {
   color: rgb(129, 127, 127);
@@ -321,6 +317,18 @@ input[type="number"]::-webkit-outer-spin-button {
 .shipping-button:hover {
   background-color: #424040;
   transition: ease-in 0.3s;
+}
+.error {
+  background: #fff !important;
+  border: 1px solid;
+  margin: 10px auto;
+  padding: 1px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  max-width: fit-content;
+  color: #d8000c;
+  background-color: #ffbaba;
+  background-image: url("https://i.imgur.com/GnyDvKN.png");
 }
 @media screen and (max-width: 769px) {
   .details-container {

@@ -7,6 +7,10 @@ import Footer from "../component/Footer";
 import "../style/detailsPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import { Formik, Form, useFormik } from "formik";
+
+import * as Yup from "yup";
+
 export default function ProductDetails() {
   const navigate = useNavigate();
 
@@ -36,7 +40,42 @@ export default function ProductDetails() {
     }
   }
 
-  const handleDecrementCondition = () => {};
+  const validation = Yup.object({
+    firstName: Yup.string()
+      .matches(/^[A-Za-z ]*$/, "Please enter valid name")
+
+      .min(3, "Too Short!")
+      .max(25, "enter valid name")
+      .required("First name is required"),
+    lastName: Yup.string()
+      .required("Last name is required")
+      .matches(/^[A-Za-z ]*$/, "Please enter valid name"),
+    address: Yup.string().required("Address is required"),
+    zipCode: Yup.number().required("Zip code is required"),
+    city: Yup.string()
+      .required("City is required")
+      .min(3, "Too Short!")
+      .matches(/^[A-Za-z ]*$/, "Please enter valid city name"),
+
+    state: Yup.string().required("State is required")
+      .min(3, "Too Short!")
+      .matches(/^[A-Za-z ]*$/, "Please enter valid city name"),
+  });
+
+  const formik = useFormik({
+    initialValues: {
+      firstName: "",
+      lastName: "",
+      address: "",
+      zipCode: "",
+      city: "",
+      state: "",
+    },
+    validationSchema: validation,
+    onSubmit: (values) => {
+      console.log(values);
+    },
+  });
 
   return (
     <div>
@@ -82,105 +121,156 @@ export default function ProductDetails() {
           </div>
         </section>
         <section className="delivery-container">
-          <div className="shipping-container">
-            <h1>Shipping</h1>
-            <p>Please enter your shipping details.</p>
-            <hr />
-            <div className="shipping-form">
-              <div className="fields fields--2">
+          <form onSubmit={formik.handleSubmit} name="devForm">
+            <div className="shipping-container">
+              <h1>Shipping</h1>
+              <p>Please enter your shipping details.</p>
+              <hr />
+              <div className="shipping-form">
+                <div className="fields fields--2">
+                  <label className="field">
+                    <span className="field__label" for="firstname">
+                      First name
+                    </span>
+                    <input
+                      className="field__input"
+                      id="firstname"
+                      name="firstName"
+                      placeholder="e.g. Foulen"
+                      onChange={formik.handleChange}
+                      value={formik.values.firstName}
+                    />
+                    {formik.errors.firstName ? (
+                      <div className="error">{formik.errors.firstName}</div>
+                    ) : null}
+                  </label>
+                  <label className="field">
+                    <span className="field__label" for="lastname">
+                      Last name
+                    </span>
+                    <input
+                      placeholder="e.g. Ben Foulen"
+                      className="field__input"
+                      type="text"
+                      id="lastname"
+                      name="lastName"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                    />
+                    {formik.touched.lastName && formik.errors.lastName ? (
+                      <div className="error">{formik.errors.lastName}</div>
+                    ) : null}
+                  </label>
+                </div>
                 <label className="field">
-                  <span className="field__label" for="firstname">
-                    First name
+                  <span className="field__label" for="address">
+                    Address
                   </span>
                   <input
+                    placeholder="e.g avenue 5 aout"
                     className="field__input"
                     type="text"
-                    id="firstname"
-                    placeholder="e.g. Foulen"
+                    id="address"
+                    name="address"
+                    onChange={formik.handleChange}
+                    onBlur={formik.handleBlur}
+                    value={formik.values.address}
                   />
+                  {formik.touched.address && formik.errors.address ? (
+                    <div className="error">{formik.errors.address}</div>
+                  ) : null}
                 </label>
-                <label className="field">
-                  <span className="field__label" for="lastname">
-                    Last name
-                  </span>
-                  <input placeholder="e.g. Ben Foulen"
-                    className="field__input"
-                    type="text"
-                    id="lastname"
-                    
-                  />
-                </label>
+
+                <div className="fields fields--3">
+                  <label className="field">
+                    <span className="field__label" for="zipcode">
+                      Zip code
+                    </span>
+                    <input
+                      placeholder="e.g. 3000"
+                      className="field__input"
+                      type="number"
+                      id="zipcode"
+                      name="zipCode"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.zipCode}
+                    />
+                    {formik.touched.zipCode && formik.errors.zipCode ? (
+                      <div className="error">{formik.errors.zipCode}</div>
+                    ) : null}
+                  </label>
+                  <label className="field">
+                    <span className="field__label" for="city">
+                      City
+                    </span>
+                    <input
+                      placeholder="e.g. Marsa"
+                      className="field__input"
+                      type="text"
+                      id="city"
+                      name="city"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}
+                      value={formik.values.city}
+                    />
+                    {formik.touched.city && formik.errors.city ? (
+                      <div className="error">{formik.errors.city}</div>
+                    ) : null}
+                  </label>
+                  <label className="field">
+                    <span className="field__label" for="state">
+                      State
+                    </span>
+
+                    <select
+                      classNames="sel"
+                      id="fi-regionId"
+                      name="state"
+                      aria-label="Région"
+                      onChange={formik.handleChange}
+                      onBlur={formik.handleBlur}>
+                      value={formik.values.state}
+                      <option value="" disabled=""></option>
+                      <option value="2">Ariana</option>
+                      <option value="8">Béja</option>
+                      <option value="3">Ben Arous</option>
+                      <option value="7">Bizerte</option>
+                      <option value="22">Gabes</option>
+                      <option value="19">Gafsa</option>
+                      <option value="9">Jendouba</option>
+                      <option value="12">Kairouan</option>
+                      <option value="13">Kasserine</option>
+                      <option value="21">Kebili</option>
+                      <option value="4">La Manouba</option>
+                      <option value="10">Le Kef</option>
+                      <option value="17">Mahdia</option>
+                      <option value="23">Médenine</option>
+                      <option value="16">Monastir</option>
+                      <option value="5">Nabeul</option>
+                      <option value="18">Sfax</option>
+                      <option value="14">Sidi Bouzid</option>
+                      <option value="11">Siliana</option>
+                      <option value="15">Sousse</option>
+                      <option value="24">Tataouine</option>
+                      <option value="20">Tozeur</option>
+                      <option value="1" selected="">
+                        Tunis
+                      </option>
+                      <option value="6">Zaghouan</option>
+                    </select>
+                    {formik.touched.state && formik.errors.state ? (
+                      <div className="error">{formik.errors.state}</div>
+                    ) : null}
+                  </label>
+                </div>
               </div>
-              <label className="field">
-                <span className="field__label" for="address">
-                  Address
-                </span>
-                <input placeholder="e.g avenue 5 aout" className="field__input" type="text" id="address" />
-              </label>
-              
-              <div className="fields fields--3">
-                <label className="field">
-                  <span  className="field__label" for="zipcode">
-                    Zip code
-                  </span>
-                  <input placeholder="e.g. 3000" className="field__input" type="number" id="zipcode" />
-                </label>
-                <label className="field">
-                  <span className="field__label" for="city">
-                    City
-                  </span>
-                  <input placeholder="e.g. Marsa" className="field__input" type="text" id="city" />
-                </label>
-                <label className="field">
-                  <span className="field__label" for="state">
-                    State
-                  </span>
-                  
-                  <select
-                    required
-                    classNames="sel"
-                    id="fi-regionId"
-                    name="regionId"
-                    aria-label="Région">
-                    <option value="" disabled=""  ></option>
-                    <option value="2">Ariana</option>
-                    <option value="8">Béja</option>
-                    <option value="3">Ben Arous</option>
-                    <option value="7">Bizerte</option>
-                    <option value="22">Gabes</option>
-                    <option value="19">Gafsa</option>
-                    <option value="9">Jendouba</option>
-                    <option value="12">Kairouan</option>
-                    <option value="13">Kasserine</option>
-                    <option value="21">Kebili</option>
-                    <option value="4">La Manouba</option>
-                    <option value="10">Le Kef</option>
-                    <option value="17">Mahdia</option>
-                    <option value="23">Médenine</option>
-                    <option value="16">Monastir</option>
-                    <option value="5">Nabeul</option>
-                    <option value="18">Sfax</option>
-                    <option value="14">Sidi Bouzid</option>
-                    <option value="11">Siliana</option>
-                    <option value="15">Sousse</option>
-                    <option value="24">Tataouine</option>
-                    <option value="20">Tozeur</option>
-                    <option value="1" selected="">
-                      Tunis
-                    </option>
-                    <option value="6">Zaghouan</option>
-                  </select>
-                </label>
-              </div>
+              <input type="submit" className="shipping-button" />
             </div>
-            <button className="shipping-button">Continue</button>
-          </div>
+          </form>
         </section>
       </section>
-      <section className="details-container">
-        <h2>description</h2>
-        {description}
-      </section>
+
       <Footer />
     </div>
   );

@@ -2,6 +2,8 @@ import React, {memo,Component  } from "react";
 import "../style/NavbarStyles.css";
 import { Link } from "react-router-dom";
 import { ShoppingCart } from "@mui/icons-material";
+import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+
 class Navbar extends Component {
   state = { clicked: false };
   handleClick = () => {
