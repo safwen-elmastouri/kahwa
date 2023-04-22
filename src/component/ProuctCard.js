@@ -8,9 +8,9 @@ import "../style/productCard.css";
 function ProuctCard(props) {
   const [addProduct, setAddProduct] = useState([]);
 
-  const {id, source, title, description, val, price } = props;
+  const { id, source, title, description, val, price } = props;
   return (
-    <div className="card" id={id} >
+    <div className="card" id={id}>
       <Link
         to="/details"
         state={props}
@@ -33,14 +33,9 @@ function ProuctCard(props) {
             </p>
           </div>
           <div id="product-bottom">
-            <Link
-              to="/my-cart"
-              state={props}
-              style={{ color: "inherit", textDecoration: "inherit" }}>
-              <Button className="add-btn" color="tertiary" variant="elevated">
-                add to cart
-              </Button>
-            </Link>
+            <Button className="add-btn" color="tertiary" variant="elevated">
+              Add to cart
+            </Button>
           </div>
         </div>
       </Link>

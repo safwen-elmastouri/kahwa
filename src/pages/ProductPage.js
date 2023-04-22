@@ -1,4 +1,4 @@
-import React, { useState, memo, useEffect } from "react";
+import React, { useState, memo, useMemo } from "react";
 import NavBar from "../component/NavBar";
 import { food, drink } from "../data/data";
 import ProuctCard from "../component/ProuctCard";
@@ -7,6 +7,7 @@ import "../style/productPage.css";
 import { useLocation } from "react-router-dom";
 
 function ProductPage() {
+    window.scrollTo(0, 0);
   const [empty, setEmpty] = useState(false);
   const location = useLocation();
   const state = location.state;
@@ -22,52 +23,60 @@ function ProductPage() {
   return (
     <>
       <NavBar />
-      {condition ? (
-        <h3 className="menu-titile">Food menu</h3>
-      ) : (
-        <h3 className="menu-titile">Drinks Menu</h3>
-      )}
-      <div className="box">
-        <input
-          type="text"
-          className="input"
-          name="txt"
-          value={searchTerm}
-          placeholder="Search ..."
-          onChange={(event) => {
-            setSearchTerm(event.target.value);
-          }}
-        />
-      </div>
-      <div className="product-container">
-        {data
-          .filter((item) => {
-            if (searchTerm == "") {
-              return item;
-            } else if (
-              item.title.toLowerCase().includes(searchTerm.toLocaleLowerCase())
-            ) {
-              return item;
-            } else if (!item.length) {
-              setEmpty(!empty);
-            }
-          })
-          .map((item, key) => {
-            return (
-              <ProuctCard
-                id={ key }
-                key={key}
-                source={item.source}
-                title={item.title}
-                description={item.description}
-                val={item.val}
-                price={item.price}
-              />
-            );
-          })}
-      </div>
-      {empty && <p>dd</p>}
-      {console.log(empty)}
+      <main>
+        {condition ? (
+          <h3 className="menu-titile">Food menu</h3>
+        ) : (
+          <h3 className="menu-titile">Drinks Menu</h3>
+        )}
+        <div className="box">
+          <input
+            type="text"
+            className="input"
+            name="txt"
+            value={searchTerm}
+            placeholder="Search ..."
+            onChange={(event) => {
+              setSearchTerm(event.target.value);
+            }}
+          />
+        </div>
+        <div className="product-container">
+          {data
+            .filter((item) => {
+              if (searchTerm == "") {
+                return item;
+              } else if (
+                item.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLocaleLowerCase())
+              ) {
+                return item;
+              } else if (
+                item.title
+                  .toLowerCase()
+                  .includes(searchTerm.toLocaleLowerCase())
+              ) {
+                console.log(item);
+              }
+            })
+            .map((item, key) => {
+
+                return ( 
+                  <ProuctCard
+                    id={key}
+                    key={key}
+                    source={item.source}
+                    title={item.title}
+                    description={item.description}
+                    val={item.val}
+                    price={item.price}
+                  />
+              );
+            })}
+        </div>
+        <p></p>
+      </main>
       <Footer />
     </>
   );
