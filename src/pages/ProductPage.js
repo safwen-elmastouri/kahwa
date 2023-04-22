@@ -7,7 +7,7 @@ import "../style/productPage.css";
 import { useLocation } from "react-router-dom";
 
 function ProductPage() {
-    window.scrollTo(0, 0);
+  window.scroll(0,0)
   const [empty, setEmpty] = useState(false);
   const location = useLocation();
   const state = location.state;

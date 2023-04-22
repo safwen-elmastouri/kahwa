@@ -25,7 +25,7 @@
   background: #fff;
   border-radius: 25px;
   width: max-content;
-  padding: 0px 50px;
+  padding: 15px 10px;
   display: flex;
   align-items: center;
   align-content: center;
@@ -239,8 +239,9 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .shipping-form {
-  display: grid;
-  grid-gap: 1rem;
+  display: flex;
+
+  flex-direction: column;
 }
 
 .field {
@@ -268,7 +269,8 @@ input[type="number"]::-webkit-outer-spin-button {
   outline: 0;
   font-weight: bold;
   font-size: 1rem;
-  width: 100%;
+  min-width: 85%;
+  max-width: 100%;
   -webkit-appearance: none;
   appearance: none;
   background-color: transparent;
@@ -283,11 +285,11 @@ input[type="number"]::-webkit-outer-spin-button {
   margin: 25px;
 }
 .fields--2 {
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 2fr;
   margin: 25px;
 }
 .fields--3 {
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
   margin: 25px;
 }
 ::placeholder {
@@ -331,15 +333,74 @@ input[type="number"]::-webkit-outer-spin-button {
   background-image: url("https://i.imgur.com/GnyDvKN.png");
 }
 @media screen and (max-width: 769px) {
-  .details-container {
+  .container-product {
     flex-direction: column;
-
-    margin: 10px 10px;
+    align-items: center;
   }
 
+  .details-container {
+    flex-direction: column;
+    width: 90%;
+    margin: 10px 10px;
+    margin-bottom: 35px;
+  }
+  .shipping-container {
+    padding: 0px;
+  }
+  .delivery-container {
+    width: 90%;
+  }
+  .shipping-form {
+    display: flex;
+    flex-direction: column;
+  }
+  .field {
+    display: flex;
+    margin-top: 15px;
+  }
+  .fields--2 {
+    display: flex;
+    margin: 25px;
+  }
+  .fields--3 {
+    display: flex;
+    margin: 25px;
+    flex-direction: column;
+  }
+  .field__label {
+    font-size: 0.9rem;
+  }
+  ::placeholder {
+    font-size: 0.8rem;
+  }
   #image {
   }
   .details {
     margin-left: 20px;
+  }
+  .field {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    width: 80%;
+  }
+
+  .field__input {
+    font-weight: bold;
+    font-size: 1rem;
+    width: 70%;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: transparent;
+  }
+  .fields--2 {
+    display: block;
+  }
+  .error {
+    margin-top: 10px;
+  }
+  .shipping-button {
+    width: 50%;
+    margin-left: 20%;
   }
 }

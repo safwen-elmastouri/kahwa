@@ -57,9 +57,7 @@ export default function ProductDetails() {
       .min(3, "Too Short!")
       .matches(/^[A-Za-z ]*$/, "Please enter valid city name"),
 
-    state: Yup.string().required("State is required")
-      .min(3, "Too Short!")
-      .matches(/^[A-Za-z ]*$/, "Please enter valid city name"),
+    state: Yup.string().required("State is required"),
   });
 
   const formik = useFormik({
@@ -140,10 +138,10 @@ export default function ProductDetails() {
                       onChange={formik.handleChange}
                       value={formik.values.firstName}
                     />
-                    {formik.errors.firstName ? (
-                      <div className="error">{formik.errors.firstName}</div>
-                    ) : null}
                   </label>
+                  {formik.errors.firstName ? (
+                    <div className="error">{formik.errors.firstName}</div>
+                  ) : null}
                   <label className="field">
                     <span className="field__label" for="lastname">
                       Last name
@@ -156,11 +154,12 @@ export default function ProductDetails() {
                       name="lastName"
                       onChange={formik.handleChange}
                       onBlur={formik.handleBlur}
+                      value={formik.values.lastName}
                     />
-                    {formik.touched.lastName && formik.errors.lastName ? (
-                      <div className="error">{formik.errors.lastName}</div>
-                    ) : null}
                   </label>
+                  {formik.touched.lastName && formik.errors.lastName ? (
+                    <div className="error">{formik.errors.lastName}</div>
+                  ) : null}
                 </div>
                 <label className="field">
                   <span className="field__label" for="address">
@@ -176,11 +175,10 @@ export default function ProductDetails() {
                     onBlur={formik.handleBlur}
                     value={formik.values.address}
                   />
-                  {formik.touched.address && formik.errors.address ? (
-                    <div className="error">{formik.errors.address}</div>
-                  ) : null}
                 </label>
-
+                {formik.touched.address && formik.errors.address ? (
+                  <div className="error">{formik.errors.address}</div>
+                ) : null}
                 <div className="fields fields--3">
                   <label className="field">
                     <span className="field__label" for="zipcode">
@@ -196,10 +194,10 @@ export default function ProductDetails() {
                       onBlur={formik.handleBlur}
                       value={formik.values.zipCode}
                     />
-                    {formik.touched.zipCode && formik.errors.zipCode ? (
-                      <div className="error">{formik.errors.zipCode}</div>
-                    ) : null}
                   </label>
+                  {formik.touched.zipCode && formik.errors.zipCode ? (
+                    <div className="error">{formik.errors.zipCode}</div>
+                  ) : null}
                   <label className="field">
                     <span className="field__label" for="city">
                       City
@@ -214,10 +212,10 @@ export default function ProductDetails() {
                       onBlur={formik.handleBlur}
                       value={formik.values.city}
                     />
-                    {formik.touched.city && formik.errors.city ? (
-                      <div className="error">{formik.errors.city}</div>
-                    ) : null}
                   </label>
+                  {formik.touched.city && formik.errors.city ? (
+                    <div className="error">{formik.errors.city}</div>
+                  ) : null}
                   <label className="field">
                     <span className="field__label" for="state">
                       State
@@ -259,10 +257,10 @@ export default function ProductDetails() {
                       </option>
                       <option value="6">Zaghouan</option>
                     </select>
-                    {formik.touched.state && formik.errors.state ? (
-                      <div className="error">{formik.errors.state}</div>
-                    ) : null}
                   </label>
+                  {formik.touched.state && formik.errors.state ? (
+                    <div className="error">{formik.errors.state}</div>
+                  ) : null}
                 </div>
               </div>
               <input type="submit" className="shipping-button" />
