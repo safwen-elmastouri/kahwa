@@ -118,9 +118,7 @@ export default function ProductDetails() {
               <option value="15">Sousse</option>
               <option value="24">Tataouine</option>
               <option value="20">Tozeur</option>
-              <option value="1" selected="">
-                Tunis
-              </option>
+              <option value="1" selected="">Tunis</option>
               <option value="6">Zaghouan</option>
             </select>
           </label>
