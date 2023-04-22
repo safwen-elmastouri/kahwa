@@ -7,9 +7,9 @@ class Navbar extends Component {
   handleClick = () => {
     this.setState({ clicked: !this.state.clicked });
   };
-  render() {
 
-    window.scrollTo(0,0)
+  render() {
+  
     return (
      <>
         <nav>

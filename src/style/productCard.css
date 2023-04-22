@@ -2,7 +2,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
   flex-direction: row;
   background-color: #ffff;
   padding: 0px 0.25rem 1.5rem;
@@ -12,7 +11,6 @@
   border-radius: 25px;
   margin-top: 3rem;
   box-shadow: 0.3rem 0.5rem 1.5rem #93999e;
-
   box-sizing: border-box; /* I added */
 }
 
@@ -41,10 +39,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   line-height: 100%;
 }
-#desc {
-  color: rgb(141, 134, 134);
-  text-align: center;
-}
+
 .productCard__cart {
   position: absolute;
   right: 0;
@@ -52,7 +47,6 @@
   font-size: 2rem;
   transition: 0.2s;
   cursor: pointer;
-  align-items: flex-end;
 }
 .productCard__cart:hover {
   color: #023e8a;
