@@ -25,6 +25,7 @@
   align-items: center;
   display: flex;
   margin-left: 100px;
+  padding:  100px;
 
   background: #fff;
   border-radius: 25px;
@@ -68,7 +69,6 @@ select::-ms-expand {
 }
 .details {
   margin-left: 5%;
-
 }
 .offre {
   background-color: #0077b6;
@@ -239,6 +239,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .shipping-container {
+  padding: 0px 100px;
   display: block;
   max-width: 40rem;
   margin: 0 auto;
