@@ -82,46 +82,99 @@ export default function ProductDetails() {
           </div>
         </section>
         <section className="delivery-container">
-          <div>
-            <p>delivry & returns</p>
+          <div className="shipping-container">
+            <h1>Shipping</h1>
+            <p>Please enter your shipping details.</p>
+            <hr />
+            <div className="shipping-form">
+              <div className="fields fields--2">
+                <label className="field">
+                  <span className="field__label" for="firstname">
+                    First name
+                  </span>
+                  <input
+                    className="field__input"
+                    type="text"
+                    id="firstname"
+                    placeholder="e.g. Foulen"
+                  />
+                </label>
+                <label className="field">
+                  <span className="field__label" for="lastname">
+                    Last name
+                  </span>
+                  <input placeholder="e.g. Ben Foulen"
+                    className="field__input"
+                    type="text"
+                    id="lastname"
+                    
+                  />
+                </label>
+              </div>
+              <label className="field">
+                <span className="field__label" for="address">
+                  Address
+                </span>
+                <input placeholder="e.g avenue 5 aout" className="field__input" type="text" id="address" />
+              </label>
+              
+              <div className="fields fields--3">
+                <label className="field">
+                  <span  className="field__label" for="zipcode">
+                    Zip code
+                  </span>
+                  <input placeholder="e.g. 3000" className="field__input" type="number" id="zipcode" />
+                </label>
+                <label className="field">
+                  <span className="field__label" for="city">
+                    City
+                  </span>
+                  <input placeholder="e.g. Marsa" className="field__input" type="text" id="city" />
+                </label>
+                <label className="field">
+                  <span className="field__label" for="state">
+                    State
+                  </span>
+                  
+                  <select
+                    required
+                    classNames="sel"
+                    id="fi-regionId"
+                    name="regionId"
+                    aria-label="Région">
+                    <option value="" disabled=""  ></option>
+                    <option value="2">Ariana</option>
+                    <option value="8">Béja</option>
+                    <option value="3">Ben Arous</option>
+                    <option value="7">Bizerte</option>
+                    <option value="22">Gabes</option>
+                    <option value="19">Gafsa</option>
+                    <option value="9">Jendouba</option>
+                    <option value="12">Kairouan</option>
+                    <option value="13">Kasserine</option>
+                    <option value="21">Kebili</option>
+                    <option value="4">La Manouba</option>
+                    <option value="10">Le Kef</option>
+                    <option value="17">Mahdia</option>
+                    <option value="23">Médenine</option>
+                    <option value="16">Monastir</option>
+                    <option value="5">Nabeul</option>
+                    <option value="18">Sfax</option>
+                    <option value="14">Sidi Bouzid</option>
+                    <option value="11">Siliana</option>
+                    <option value="15">Sousse</option>
+                    <option value="24">Tataouine</option>
+                    <option value="20">Tozeur</option>
+                    <option value="1" selected="">
+                      Tunis
+                    </option>
+                    <option value="6">Zaghouan</option>
+                  </select>
+                </label>
+              </div>
+            </div>
+            <button className="shipping-button">Continue</button>
           </div>
-          <label>
-            <p>select adress</p>
-            <select
-              required=""
-              classNames="sel"
-              id="fi-regionId"
-              name="regionId"
-              aria-label="Région">
-              <option value="" disabled="">
-                Sélectionner
-              </option>
-              <option value="2">Ariana</option>
-              <option value="8">Béja</option>
-              <option value="3">Ben Arous</option>
-              <option value="7">Bizerte</option>
-              <option value="22">Gabes</option>
-              <option value="19">Gafsa</option>
-              <option value="9">Jendouba</option>
-              <option value="12">Kairouan</option>
-              <option value="13">Kasserine</option>
-              <option value="21">Kebili</option>
-              <option value="4">La Manouba</option>
-              <option value="10">Le Kef</option>
-              <option value="17">Mahdia</option>
-              <option value="23">Médenine</option>
-              <option value="16">Monastir</option>
-              <option value="5">Nabeul</option>
-              <option value="18">Sfax</option>
-              <option value="14">Sidi Bouzid</option>
-              <option value="11">Siliana</option>
-              <option value="15">Sousse</option>
-              <option value="24">Tataouine</option>
-              <option value="20">Tozeur</option>
-              <option value="1" selected="">Tunis</option>
-              <option value="6">Zaghouan</option>
-            </select>
-          </label>
         </section>
       </section>
       <section className="details-container">
