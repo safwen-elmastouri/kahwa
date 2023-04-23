@@ -3,6 +3,13 @@
 :before {
   box-sizing: border-box;
 }
+.details {
+display: flex;
+flex-direction: column;
+justify-content: center;
+position: relative;
+  margin-left: 5%;
+}
 .container-product {
   animation-name: product-animation;
   animation-duration: 2.1s;
@@ -22,7 +29,7 @@
   margin: 10px 10px;
   border-radius: 25px;
   margin-right: 30px;
-  width: 60%;
+  width: 40%;
 }
 .delivery-container {
   height: 30%;
@@ -66,11 +73,7 @@ select {
 select::-ms-expand {
   display: none;
 }
-.details {
-    position: relative;
 
-  margin-left: 5%;
-}
 .offre {
   background-color: #0077b6;
   padding: 3px;
