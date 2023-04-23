@@ -115,6 +115,7 @@ export default function ProductDetails() {
             <p id="price-product">{price}dt</p>
             <p className="discount">4.00 dt</p>
             <p id="delivry"> livraison à partir de 4.00 TND</p>
+            <p className="description"> {description} </p>
             <button className="add">Add to Cart</button>
           </div>
         </section>
