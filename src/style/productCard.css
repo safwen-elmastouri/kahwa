@@ -3,7 +3,8 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  background-color: #ffffffbe;
+  background-color: #ffff;
+
   padding: 0px 0.25rem 1.5rem;
   position: relative;
   margin: 2rem;
@@ -16,8 +17,7 @@
 }
 
 .card:hover {
-  background-color: #ffff;
-
+opacity: 0.9;
 
   transform: translateY(-0.2rem);
   box-shadow: 0.7rem 0.9rem 1.8rem #5e6266;

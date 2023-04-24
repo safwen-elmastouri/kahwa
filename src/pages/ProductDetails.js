@@ -11,6 +11,7 @@ import "../style/detailsPage.css";
 import * as Yup from "yup";
 
 export default function ProductDetails() {
+  window.scroll(0, 0);
   const navigate = useNavigate();
 
   const goBack = () => {

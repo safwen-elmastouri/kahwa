@@ -11,6 +11,7 @@ function Home(props) {
     <>
       <Navbar />
       <div className="desc">
+        
         <div>
           <h3>Find the perfect coffee for any time of day</h3>
           <p id="desc-details">
