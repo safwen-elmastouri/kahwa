@@ -1,0 +1,75 @@
+.error-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+@keyframes change-color {
+  40% {
+    color: #9d0208;
+  }
+  15%{
+    color :#1a1b1d
+  }
+}
+
+#error-title {
+  animation-name: change-color;
+  animation-duration: 5s;
+  font-size: 5rem;
+  color: #4d4d4d;
+  text-align: center;
+}
+
+#error-subtitle {
+  animation-name: change-color;
+  animation-duration: 5s;
+  font-size: 1.7rem;
+  color: #495057;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  letter-spacing: -1px;
+  text-align: center;
+}
+#btn {
+  background-color: #000;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+  color: #fff;
+  width: max-content;
+  height: max-content;
+  padding: 1rem 3rem;
+  border-radius: 0.25rem;
+  border: 0;
+  cursor: pointer;
+  outline: 0;
+  transition: ease-in 0.2s;
+}
+#btn:hover {
+  background-color: #6c757d;
+}
+
+@media screen and (max-width: 769px) {
+  .error-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  #error-title {
+    font-size: 3rem;
+    text-align: center;
+    color: #444;
+  }
+
+  #error-subtitle {
+    font-size: 1rem;
+    text-align: justify;
+    letter-spacing: 1px;
+    max-width: 70%;
+    color: #777;
+  }
+}

@@ -4,11 +4,10 @@ import ProuctCard from "../component/ProuctCard";
 import ReactStars from "react-rating-stars-component";
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
-import "../style/detailsPage.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { Formik, Form, useFormik } from "formik";
-
+import "../style/detailsPage.css";
 import * as Yup from "yup";
 
 export default function ProductDetails() {

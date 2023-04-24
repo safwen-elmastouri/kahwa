@@ -3,8 +3,8 @@ import NavBar from "../component/NavBar";
 import { food, drink } from "../data/data";
 import ProuctCard from "../component/ProuctCard";
 import Footer from "../component/Footer";
-import "../style/productPage.css";
 import { useLocation } from "react-router-dom";
+import "../style/productPage.css";
 
 function ProductPage() {
   window.scroll(0,0)

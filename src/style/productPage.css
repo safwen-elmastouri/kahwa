@@ -1,6 +1,6 @@
 .product-container {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   margin: 1rem 2rem;
   justify-content: space-around;
   box-sizing: border-box;
