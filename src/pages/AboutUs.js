@@ -15,7 +15,7 @@ export default function AboutUs() {
         </div>
         <div className="content">
           <h1>About US</h1>
-          Welcome to our food and coffee delivery website! We are a team of
+          Welcome to KAHWA our food and coffee delivery website! We are a team of
           passionate individuals who believe in the power of delicious food and
           quality coffee to make people's day better.<br/> Our mission is to bring
           convenience and satisfaction to your doorstep with our easy-to-use
