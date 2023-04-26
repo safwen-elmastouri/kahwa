@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import Button from "@mui/material-next/Button";
 import "../style/productCard.css";
 
-function ProuctCard(props) {
+function ProductCard(props) {
   const [addProduct, setAddProduct] = useState([]);
 
   const { id, source, title, description, val, price } = props;
@@ -43,4 +43,4 @@ function ProuctCard(props) {
   );
 }
 
-export default memo(ProuctCard);
+export default memo(ProductCard);

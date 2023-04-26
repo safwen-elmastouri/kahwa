@@ -1,13 +1,13 @@
 import React, { useState, memo, useMemo } from "react";
 import NavBar from "../component/NavBar";
 import { food, drink } from "../data/data";
-import ProuctCard from "../component/ProuctCard";
+import ProductCard from "../component/ProductCard";
 import Footer from "../component/Footer";
 import { useLocation } from "react-router-dom";
 import "../style/productPage.css";
 
 function ProductPage() {
-  window.scroll(0,0)
+  window.scroll(0, 0);
   const [empty, setEmpty] = useState(false);
   const location = useLocation();
   const state = location.state;
@@ -61,17 +61,16 @@ function ProductPage() {
               }
             })
             .map((item, key) => {
-
-                return ( 
-                  <ProuctCard
-                    id={key}
-                    key={key}
-                    source={item.source}
-                    title={item.title}
-                    description={item.description}
-                    val={item.val}
-                    price={item.price}
-                  />
+              return (
+                <ProductCard
+                  id={key}
+                  key={key}
+                  source={item.source}
+                  title={item.title}
+                  description={item.description}
+                  val={item.val}
+                  price={item.price}
+                />
               );
             })}
         </div>

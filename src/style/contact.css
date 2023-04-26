@@ -1,0 +1,28 @@
+.contact-form {
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+  margin-top: 40px;
+}
+.clicked {
+  height: 30%;
+  display: flex;
+
+  display: flex;
+  border-radius: 25px;
+  justify-content: center;
+  padding: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  align-items: center;
+  margin-top: 50px;
+  align-items: center;
+  margin-bottom: 15%;
+}
+.clicked p {
+  background-color:#2ec4b6;
+  padding: 10px;
+  letter-spacing: 3px;
+  color: white;
+  min-width: 100%;
+}

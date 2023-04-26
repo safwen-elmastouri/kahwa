@@ -13,11 +13,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error404 />} />
-        <Route path="contact" element={<Contact />} />
-        <Route path="product" element={<ProductPage />} />
-        <Route path="my-cart" element={<Cart />} />
-        <Route path="details" element={<ProductDetails />} />
-        <Route path="about-us" element={<AboutUs />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/my-cart" element={<Cart />} />
+        <Route path="/details" element={<ProductDetails />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
     </BrowserRouter>
   );

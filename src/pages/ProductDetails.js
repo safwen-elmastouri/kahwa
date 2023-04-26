@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { useLocation, useNavigate, Link } from "react-router-dom";
-import ProuctCard from "../component/ProuctCard";
 import ReactStars from "react-rating-stars-component";
 import NavBar from "../component/NavBar";
 import Footer from "../component/Footer";
@@ -23,7 +22,7 @@ export default function ProductDetails() {
   console.log(description);
   const [quantity, setQuantity] = useState(1);
   const [totalprice, setTotalPrice] = useState(price);
-
+const [clicked ,setClicked]=useState(false)
   const [count, setCount] = useState(1);
 
   function handleIncrement() {
@@ -43,14 +42,15 @@ export default function ProductDetails() {
   const validation = Yup.object({
     firstName: Yup.string()
       .matches(/^[A-Za-z ]*$/, "Please enter valid name")
-
-      .min(3, "Too Short!")
+      .min(3, "Too Short first name ! ")
       .max(25, "enter valid name")
       .required("First name is required"),
     lastName: Yup.string()
       .required("Last name is required")
-      .matches(/^[A-Za-z ]*$/, "Please enter valid name"),
-    address: Yup.string().required("Address is required"),
+      .matches(/^[A-Za-z ]*$/, "Please enter valid name")
+    .min(2,"short last name"),
+    address: Yup.string().required("Address is required")
+    .min(5,"enter valid adress"),
     zipCode: Yup.number().required("Zip code is required"),
     city: Yup.string()
       .required("City is required")
@@ -116,9 +116,17 @@ export default function ProductDetails() {
             <p className="discount">4.00 dt</p>
             <p id="delivry"> livraison à partir de 4.00 TND</p>
             <p className="description"> {description} </p>
-            <button className="add">Add to Cart</button>
+            <Link
+              to="/my-cart"
+              state={state}
+              style={{ color: "inherit", textDecoration: "inherit" }}>
+              <button className="add">Add to Cart</button>
+            </Link>
           </div>
         </section>
+        { clicked ?
+        <section className="clicked"><p>Thanks for buying <br/>Your order will be treated asap</p></section>
+          :
         <section className="delivery-container">
           <form onSubmit={formik.handleSubmit} name="devForm">
             <div className="shipping-container">
@@ -163,7 +171,7 @@ export default function ProductDetails() {
                   ) : null}
                 </div>
                 <label className="field">
-                  <span className="field__label" for="address">
+                  <span s className="field__label" for="address">
                     Address
                   </span>
                   <input
@@ -264,11 +272,12 @@ export default function ProductDetails() {
                   ) : null}
                 </div>
               </div>
-              <input type="submit" className="shipping-button" />
+              <input type="submit" className="shipping-button" onClick={()=> {setClicked(true)} }  />
             </div>
           </form>
         </section>
-      </section>
+        }
+        </section>  
 
       <Footer />
     </div>

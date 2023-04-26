@@ -400,6 +400,8 @@ input[type="number"]::-webkit-outer-spin-button {
     flex-direction: column;
     height: auto;
     width: 80%;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .field__input {
@@ -420,4 +422,9 @@ input[type="number"]::-webkit-outer-spin-button {
     width: 50%;
     margin-left: 20%;
   }
+
+  .description{
+  margin-bottom: 30%;
 }
+}
+

@@ -49,7 +49,7 @@ class Navbar extends Component {
                 </Link>
               </li>
               <li>
-                <Link to="about-us">
+                <Link to="/about-us">
                   <a>About</a>
                 </Link>
               </li>

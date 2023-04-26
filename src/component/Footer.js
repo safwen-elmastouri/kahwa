@@ -10,46 +10,17 @@ function Footer() {
   return (
     <div className="container">
       <div className="service">
-        <h4>Our services</h4>
-        <div>
-          <a>
-            {" "}
-            <p>Drinks</p>{" "}
-          </a>
-          <a>
-            {" "}
-            <p>Food</p>{" "}
-          </a>
-        </div>
-      </div>
-
-      <div className="service">
         <a>
-          {" "}
           <h4>About us</h4>{" "}
         </a>
         <a>
-          {" "}
-          <h4>Contact us</h4>{" "}
+          <h4>Contact</h4>
         </a>
       </div>
-      <div className="sm-container">
-        <h4>Social media</h4>
-        <div>
-          <a>
-            {" "}
-            <img id="social-media" src={fb} />
-          </a>
-          <a>
-            {" "}
-            <img id="social-media" src={yt} />
-          </a>
-          <a>
-            {" "}
-            <img id="social-media" src={tw} />
-          </a>
-        </div>
-      </div>
+      <p id="para">All Right Reserved ®</p>
+      <a target="_blank" href="https://github.com/safwendev">
+        <img src={require("../images/github.png")} />
+      </a>
     </div>
   );
 }

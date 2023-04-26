@@ -1,9 +1,8 @@
 .container {
-  background: #2c3034 ;
-  bottom:  calc(20px);
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  padding: 20px;
+  background: #2c3034;
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
   margin-top: 5%;
   box-shadow: 0px 0px 35px #54595e;
   margin-bottom: -20px;
@@ -12,28 +11,40 @@
 }
 .container h4 {
   color: #2a8387;
-  font-size: 16px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.sm-container {
+.service {
+  display: flex;
   flex-direction: row;
-  align-items: center;
-  align-self: center;
+  justify-content: space-evenly;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-.service a {
+.container h4:hover {
   color: #ffff;
   transition: all 0.3s ease-inw;
 }
-.service a:hover {
-  color: #17cf97;
-  box-shadow: black;
+#para {
+  display: flex;
+  justify-content: center;
+  color: #fff;
+  letter-spacing: 5px;
 }
-
-#social-media {
+.container a{
+  align-self: flex-end;
+}
+.container img {
+  height: 35px;
+  width: 35px;
+  align-self: flex-end;
+  margin-top: -25px;
+  margin-right: 25px;
+}
+.container img:hover {
   cursor: pointer;
-  width: 8%;
-  height: 9%;
-  border-radius: 35px;
-  margin: 0px 0.5%;
 }
 
 @media screen and (max-width: 769px) {
@@ -47,7 +58,37 @@
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
 
-  #social-media {
-    width: 20%;
+  .container h4 {
+    color: #2a8387;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+      "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  }
+  .service {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 0%;
+    margin-right: 0%;
+  }
+  #para {
+    display: flex;
+    justify-content: center;
+    color: #fff;
+    letter-spacing: 0px;
+    min-width: max-content;
+  }
+  .container a{
+    align-self: center;
+  }
+  .container img {
+    height: 25px;
+    width: 25px;
+    margin-top: 0px;
+    margin-right: -0px;
+    margin-bottom: -5%;
+    margin-top:60%;
+
   }
 }
