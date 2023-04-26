@@ -6,6 +6,7 @@ import { Formik, Form, useFormik } from "formik";
 import * as Yup from "yup";
 
 export default function Contact() {
+  window.scroll(0,0)
   const [clicked ,setClicked]=useState(false)
   const validation = Yup.object({
     firstName: Yup.string()

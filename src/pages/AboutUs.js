@@ -4,7 +4,7 @@ import Footer from "../component/Footer";
 import "../style/about.css";
 
 export default function AboutUs() {
- 
+ window.scroll(0,0)
 
   return (
     <>
