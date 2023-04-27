@@ -7,11 +7,23 @@ import { Link } from "react-router-dom";
 function Home(props) {
   window.scrollTo(0, 0);
 
+  const images = [
+    {
+      source: require("../images/ads/ad1.jpg"),
+    },
+    {
+      source: require("../images/ads/ad2.jpg"),
+    },
+    { source: require("../images/ads/ad3.jpg") },
+    {
+      source: require("../images/ads/ad4.jpg"),
+    },
+  ];
+
   return (
     <>
       <Navbar />
       <div className="desc">
-        
         <div>
           <h3>Find the perfect coffee for any time of day</h3>
           <p id="desc-details">
@@ -89,6 +101,7 @@ function Home(props) {
           />
         </div>
       </div>
+ 
 
       <section className="menu">
         <div id="drinks">

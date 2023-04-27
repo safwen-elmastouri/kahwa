@@ -7,6 +7,7 @@ import Cart from "./pages/Cart";
 import ProductDetails from "./pages/ProductDetails";
 import Error404 from "./pages/Error404";
 import AboutUs from "./pages/AboutUs";
+import Payment from "./pages/Payment";
 export default function App() {
   return (
     <BrowserRouter>
@@ -14,6 +15,7 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error404 />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/payment" element={<Payment />} />
         <Route path="/product" element={<ProductPage />} />
         <Route path="/my-cart" element={<Cart />} />
         <Route path="/details" element={<ProductDetails />} />

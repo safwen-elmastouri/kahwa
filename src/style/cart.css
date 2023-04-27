@@ -2,21 +2,21 @@
   background-color: #ffff;
   display: flex;
   flex-direction: row;
-  margin-left  : 15px;
+  margin-left: 15px;
   margin-right: 40%;
   animation-name: product-animation;
   animation-duration: 2.1s;
   animation-fill-mode: inherit;
   box-sizing: border-box;
   border-radius: 35px;
-  box-shadow:0px 10px 15px 5px rgb(124, 121, 121)
+  box-shadow: 0px 10px 15px 5px rgb(124, 121, 121);
 }
 .cart-container img {
   width: 250px;
 }
-.cart-container h4{
-    font-size: 1.5rem;
-    text-align: center;
+.cart-container h4 {
+  font-size: 1.5rem;
+  text-align: center;
 }
 .detail {
   margin-left: 40px;
@@ -29,30 +29,29 @@
 }
 #price {
   text-align: center;
-
 }
 .quantity button {
-  width: 40%;
+  width: 30%;
   height: 30px;
   margin: 20px;
   background-color: #000;
   color: #ffff;
+  border-radius: 10px;
+  font-size: 1.5rem;
 }
 .quantity p {
   width: max-content;
   font-size: 1.5rem;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-.buy{
-     background-color: #000;
+.buy {
+  background-color: #000;
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 600;
   display: flex;
-  margin-left: 15%;
-  margin-top: 20px;
-  margin-bottom: 20px;
   justify-content: center;
   color: #fff;
   width: 20%;
@@ -61,61 +60,58 @@
   border-radius: 0.25rem;
   border: 0;
   cursor: pointer;
-  align-self: flex-end;
 }
-.buy:hover{
-
+.buy:hover {
   background-color: #424040;
   transition: ease-in 0.3s;
 }
 
 @media screen and (max-width: 769px) {
-.cart-container {
-  flex-direction: column ;
-  margin-left  : 15px;
-  margin-right: 0%;
-  justify-content: center;
-  align-items: center;
-  
-}
-.detail {
-    justify-content: center ;
-  margin-left: 0px;
-  margin-top: 0px;
-}
-.cart-container img {
-  width: 70%;
-margin-left: auto;
-margin-right: auto;
-}
-
-.buy{
-     background-color: #000;
-  margin-left: 0px;
-  margin-top: 5%;
-  margin-bottom: 20px;
-  justify-content: center;
-  color: #fff;
-  width: 20%;
-  height: 10%;
-  padding: 1rem;
-  border-radius: 0.25rem;
-  border: 0;
-  cursor: pointer;
-  align-self: center;
-}
-.quantity button {
-  width: 10%;
-  height: 30px;
-  margin: 20px;
-  background-color: #000;
-  color: #ffff;
-}
-.quantity{
+  .cart-container {
+    flex-direction: column;
+    margin-left: 15px;
+    margin-right: 0%;
     justify-content: center;
     align-items: center;
-}
-.total {
+  }
+  .detail {
+    justify-content: center;
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  .cart-container img {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buy {
+    background-color: #000;
+    margin-left: 0px;
+    margin-top: 5%;
+    margin-bottom: 20px;
+    justify-content: center;
+    color: #fff;
+    width: 20%;
+    height: 10%;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    border: 0;
+    cursor: pointer;
+    align-self: center;
+  }
+  .quantity button {
+    width: 10%;
+    height: 30px;
+    margin: 20px;
+    background-color: #000;
+    color: #ffff;
+  }
+  .quantity {
+    justify-content: center;
+    align-items: center;
+  }
+  .total {
     font-size: 2rem;
-}
+  }
 }

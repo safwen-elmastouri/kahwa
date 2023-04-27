@@ -6,8 +6,8 @@ import { Formik, Form, useFormik } from "formik";
 import * as Yup from "yup";
 
 export default function Contact() {
-  window.scroll(0,0)
-  const [clicked ,setClicked]=useState(false)
+  window.scroll(0, 0);
+  const [clicked, setClicked] = useState(false);
   const validation = Yup.object({
     firstName: Yup.string()
       .matches(/^[A-Za-z ]*$/, "Please enter valid name")
@@ -18,7 +18,7 @@ export default function Contact() {
       .required("Last name is required")
       .matches(/^[A-Za-z ]*$/, "Please enter valid name")
       .min(2, "short last name"),
-    email: Yup.string().email(),
+    email: Yup.string().email().required("email is required"),
     zipCode: Yup.number().required("Zip code is required"),
     city: Yup.string()
       .required("City is required")
@@ -27,8 +27,8 @@ export default function Contact() {
 
     state: Yup.string().required("State is required"),
     message: Yup.string()
-      .min(3, "Too Short first name ! ")
-      .required("First name is required"),
+      .min(3, "Too Short message ! ")
+      .required("message is required"),
   });
 
   const formik = useFormik({
@@ -39,7 +39,7 @@ export default function Contact() {
       zipCode: "",
       city: "",
       state: "",
-      message:'',
+      message: "",
     },
     validationSchema: validation,
     onSubmit: (values) => {
@@ -50,7 +50,12 @@ export default function Contact() {
     <>
       <NavBar />
       {clicked ? (
-        <section className="clicked"><p> Message sent! <br/> Thanks for contact us </p></section>
+        <section className="clicked">
+          <p>
+            {" "}
+            Message sent! <br /> Thanks for contact us{" "}
+          </p>
+        </section>
       ) : (
         <div className="contact-form">
           <section className="delivery-container">
@@ -221,8 +226,9 @@ export default function Contact() {
                 <input
                   type="submit"
                   className="shipping-button"
+                  disabled={!formik.dirty}
                   onClick={() => {
-                    setClicked(true);
+                    setClicked(formik.isValid);
                   }}
                 />
               </div>
